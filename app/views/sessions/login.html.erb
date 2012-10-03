@@ -1,0 +1,25 @@
+<% unless @user.errors.empty? %>
+  <div>
+    <% @user.errors.each do |attr, msg| %>
+      <p><%= "#{attr} #{msg}" %></p>
+    <% end %>
+  </div>
+<% end %>
+  
+
+<%= form_for(@user, :url => '/login') do |f| %>
+  <table>
+    <tr class="field">
+      <td><%= f.label(:username) %></td>
+      <td><%= f.text_field(:username) %></td>
+    </tr>
+    <tr class="field">
+      <td><%= f.label(:password) %></td>
+      <td><%= f.text_field(:password) %></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><%= f.submit('Sign In') %></td>
+    </tr>
+  </table>
+<% end %>

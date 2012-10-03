@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Category:</b>
+  <%= @post.category_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @post.image_id %>
+</p>
+
+<p>
+  <b>Summary:</b>
+  <%= @post.summary %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @post.content %>
+</p>
+
+<p>
+  <b>Published at:</b>
+  <%= @post.published_at %>
+</p>
+
+<p>
+  <b>Draft:</b>
+  <%= @post.draft %>
+</p>
+
+<p>
+  <b>Protected question:</b>
+  <%= @post.protected_question %>
+</p>
+
+<p>
+  <b>Protected answer:</b>
+  <%= @post.protected_answer %>
+</p>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

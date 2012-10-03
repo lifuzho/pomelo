@@ -1,0 +1,31 @@
+<h1>Listing categories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Position</th>
+    <th>Parent</th>
+    <th>Protected question</th>
+    <th>Portected answer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= category.name %></td>
+    <td><%= category.position %></td>
+    <td><%= category.parent_id %></td>
+    <td><%= category.protected_question %></td>
+    <td><%= category.portected_answer %></td>
+    <td><%= link_to 'Show', category %></td>
+    <td><%= link_to 'Edit', edit_category_path(category) %></td>
+    <td><%= link_to 'Destroy', category, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Category', new_category_path %>
